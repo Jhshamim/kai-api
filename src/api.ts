@@ -1,7 +1,10 @@
 import express from 'express';
+import cors from 'cors';
 import * as scraper from './services/scraper.js';
 
 export const apiRouter = express.Router();
+
+apiRouter.use(cors());
 
 
   apiRouter.get("/health", (req, res) => {
